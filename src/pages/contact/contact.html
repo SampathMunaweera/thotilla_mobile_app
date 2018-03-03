@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-lines>
+    <ion-item-group>
+      <ion-item-divider color="light">Cotte Settings</ion-item-divider>
+
+      <ion-item>
+          <ion-label>Auto Swing</ion-label>
+          <ion-toggle [(ngModel)]="autoswing"></ion-toggle>
+      </ion-item>
+
+      <ion-item>Cotte Swing Speed</ion-item>
+      <ion-item>
+        <ion-range [(ngModel)]="swingspeed">
+          <ion-icon range-left small name="remove"></ion-icon>
+          <ion-icon range-right name="add"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Automatic Cotte Swing Time (Mins)</ion-label>
+          <ion-select [(ngModel)]="swingtime">
+            <ion-option value="2">2 Min</ion-option>
+            <ion-option value="5">5 Min</ion-option>
+            <ion-option value="10">10 Min</ion-option>
+            <ion-option value="20">20 Min</ion-option>
+          </ion-select>
+      </ion-item>
+      
+      
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">Alert Settings</ion-item-divider>
+      <ion-item>
+          <ion-label>Cry Alert</ion-label>
+          <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+      </ion-item>
+      </ion-item-group>
+  </ion-list>
+</ion-content>
